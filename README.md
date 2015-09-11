@@ -5,9 +5,10 @@ Algebraic datatypes for javascript.
 
 Examples are written in ES6.
 
-    var value = new Tag('Just', 3);
+    let Just = Tag.define('Just', 1);
+    let Nothing = Tag.define('Nothing', 0);
 
-    value.match({
+    Just(3).match({
     Just: (x)=> {
         console.log('The value was just', x);
         return x*10;
@@ -29,4 +30,7 @@ TODO
   wouldn't even be necessary.  This would make a lot more sense when importing
   between modules.  Tags defined in two different modules wouldn't step on
   each other's foot.
+- Use the fact of whether or not the tag is nullary to determine if the
+  match-case should be called as a function or returned directly as a value.
+  (Then again, what about executing, like the example above.)
 
