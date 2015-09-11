@@ -1,0 +1,3 @@
+memo babel -o tag.js tag.es6
+memo babel -o test.js test.es6
+memo node test.js

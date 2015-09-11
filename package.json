@@ -1,0 +1,8 @@
+{
+  "name": "tag",
+  "version": "0.0.0",
+  "description": "Algebraic data types in javascript",
+  "devDependencies": {
+    "tape": "^4.2.0"
+  }
+}
